@@ -13,8 +13,9 @@ export class HomePage {
 
   }
   joinChat() {
+    this.nickname = '';
     this.socket.connect();
     this.socket.emit('set-nickname', this.nickname);
-    this.navCtrl.push('ChatRoomPage', { nickname: this.nickname}); 
+    this.navCtrl.push('ChatRoomPage', { nickname: this.nickname }); 
   }
 }
